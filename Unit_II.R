@@ -12,3 +12,12 @@ est_climatic<- cbind(longitud, latitud)
 # simular datos de lluvias
 set.seed(0)
 precip <-round((runif(length(latitud))*10)^3)
+
+nivel_precip <- 1 + precip/500
+plot(est_climatic, cex=nivel_precip, pch=20, col='blue', main='Precitación por estaciones')
+# adicionar etiquetas de estaciones
+text(est_climatic, nombre, pos=4)
+# adicionar leyenda
+breaks <- c(100, 250, 500, 1000)
+legend.psize <- 1+breaks/500
+legend("topright", legend=breaks, pch=20, pt.cex=legend.psize, col='blue', bg='gray')
