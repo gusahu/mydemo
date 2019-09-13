@@ -3,9 +3,9 @@ title: "My_RMarkdown"
 author: "gusahu"
 date: "8/14/2019"
 output:
-  pdf_document: default
   html_document:
     keep_document: yes
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
