@@ -21,3 +21,14 @@ text(est_climatic, nombre, pos=4)
 breaks <- c(100, 250, 500, 1000)
 legend.psize <- 1+breaks/500
 legend("topright", legend=breaks, pch=20, pt.cex=legend.psize, col='blue', bg='gray')
+
+# podemos adicionar puntos, lineas y polígonos al plot
+longitud <- c(-116.8, -114.2, -112.9, -111.9, -114.2, -115.4, -117.7)
+latitud <- c(41.3, 42.9, 42.4, 39.8, 37.6, 38.3, 37.6)
+x <- cbind(longitud, latitud)
+plot(est_climatic, main='Precipitación por estaciones')
+polygon(x, col='blue', border='light blue')
+lines(est_climatic, lwd=3, col='red')
+points(x, cex=2, pch=20)
+points(est_climatic, cex=nivel_precip, pch=20, col='red', main='Precipitation by station')
+
