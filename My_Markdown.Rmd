@@ -2,10 +2,10 @@
 title: "My_RMarkdown"
 author: "gusahu"
 date: "8/14/2019"
-output: 
+output:
+  pdf_document: default
   html_document:
-    keep_document: true
-
+    keep_document: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -26,7 +26,7 @@ summary(cars)
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
+```{r pressure, echo=TRUE}
 plot(pressure)
 ```
 
