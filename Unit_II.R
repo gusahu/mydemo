@@ -32,3 +32,21 @@ lines(est_climatic, lwd=3, col='red')
 points(x, cex=2, pch=20)
 points(est_climatic, cex=nivel_precip, pch=20, col='red', main='Precipitation by station')
 
+# podemos crear un esqueleto de una base de datos raster
+rast <- raster(ncol=10, nrow=10, xmx=-80, xmn=-150, ymn=20, ymx=60)
+rast
+# asignar valores a objetos tipo raster
+values(rast) <- runif(ncell(rast))
+rast
+# podemos asignar el número de celdas 
+values(rast) <- 1:ncell(rast)
+rast
+# plottear objeto tipo raster
+plot(rast)
+# adicionar puntos y poligonos
+longitud <- c(-116.8, -114.2, -112.9, -111.9, -114.2, -115.4, -117.7)
+latitud <- c(41.3, 42.9, 42.4, 39.8, 37.6, 38.3, 37.6)
+lonlat <- cbind(longitud, latitud)
+pols <- spPolygons(lonlat, crs='+proj=longlat +datum=WGS84')
+points(lonlat, col='red', pch=20, cex=3)
+plot(pols, border='blue', lwd=2, add=TRUE)
