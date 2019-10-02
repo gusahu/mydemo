@@ -1,8 +1,8 @@
-# mydemo
+# MyDemo
 
-This is a line from RStudio
+## demo
 
-Line added from GitLab
+This is an demo
 
-En estos momentos estamos modifificando en archivo README.md
+
 
