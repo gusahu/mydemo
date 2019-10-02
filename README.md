@@ -2,7 +2,7 @@
 
 ## demo
 
-This is an demo
+This is a demo
 
 
 
